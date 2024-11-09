@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3bp8uua17grn"]
+
+[ext_resource type="Texture2D" uid="uid://b3ts8tl74lqbg" path="res://assets/sprites/Platform/platform.png" id="1_0dwpb"]
+[ext_resource type="PackedScene" uid="uid://d18xn6dih6vhb" path="res://Scenes/enemy.tscn" id="2_8wdnn"]
+[ext_resource type="PackedScene" uid="uid://wwcmt17o5n5r" path="res://Scenes/collectible.tscn" id="3_nyk1p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aeyx2"]
+size = Vector2(380, 40)
+
+[node name="Platform" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0dwpb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20)
+shape = SubResource("RectangleShape2D_aeyx2")
+
+[node name="Enemy" parent="." instance=ExtResource("2_8wdnn")]
+position = Vector2(147, -102)
+scale = Vector2(0.4, 0.4)
+
+[node name="Collectible" parent="." instance=ExtResource("3_nyk1p")]
+position = Vector2(-132, -70)
+scale = Vector2(0.3, 0.3)
+
+[node name="Collectible2" parent="." instance=ExtResource("3_nyk1p")]
+position = Vector2(-100, -110)
+scale = Vector2(0.3, 0.3)
+
+[node name="Collectible3" parent="." instance=ExtResource("3_nyk1p")]
+position = Vector2(-47, -145)
+scale = Vector2(0.3, 0.3)
+
+[node name="Collectible4" parent="." instance=ExtResource("3_nyk1p")]
+position = Vector2(0, -171)
+scale = Vector2(0.3, 0.3)
+
+[node name="Collectible5" parent="." instance=ExtResource("3_nyk1p")]
+position = Vector2(44, -150)
+scale = Vector2(0.3, 0.3)
+
+[node name="Collectible6" parent="." instance=ExtResource("3_nyk1p")]
+position = Vector2(80, -114)
+scale = Vector2(0.3, 0.3)
+
+[node name="Collectible7" parent="." instance=ExtResource("3_nyk1p")]
+position = Vector2(111, -74)
+scale = Vector2(0.3, 0.3)
